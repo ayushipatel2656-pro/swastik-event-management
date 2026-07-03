@@ -1,0 +1,187 @@
+.hero{
+    width:100%;
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:120px 8% 60px;
+}
+
+.hero-content{
+    color:white;
+    max-width:900px;
+    animation:fade 1.2s ease;
+}
+
+.hero-content h1{
+    font-size:72px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:20px;
+    text-shadow:2px 2px 15px rgba(0,0,0,.6);
+}
+
+.hero-content p{
+    font-size:26px;
+    color:#F5F5F5;
+    margin-bottom:35px;
+    line-height:1.6;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    background:#C85A0A;
+    color:white;
+    border:none;
+    padding:16px 40px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(200,90,10,.4);
+    text-decoration:none;
+}
+
+.btn:hover{
+    background:#E67E22;
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    background:transparent;
+    color:white;
+    border:2px solid white;
+    padding:16px 40px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    text-decoration:none;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:black;
+}
+
+.scroll{
+    color:white;
+    font-size:22px;
+    animation:updown 1.5s infinite;
+}
+
+/* Animation */
+
+@keyframes updown{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media(max-width:992px){
+
+.hero-content h1{
+    font-size:60px;
+}
+
+.hero-content p{
+    font-size:22px;
+}
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media(max-width:768px){
+
+.hero{
+    padding:100px 20px 60px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    line-height:1.2;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.btn,
+.btn-outline{
+    width:100%;
+    max-width:280px;
+    text-align:center;
+}
+
+.scroll{
+    font-size:18px;
+}
+
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media(max-width:480px){
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-content p{
+    font-size:17px;
+}
+
+.btn,
+.btn-outline{
+    font-size:17px;
+    padding:14px 20px;
+}
+
+}
