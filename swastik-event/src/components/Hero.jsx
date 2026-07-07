@@ -1,6 +1,7 @@
 <section className="hero" data-aos="fade-up"></section>
 import "./Hero.css";
 import heroImg from "../assets/images/hero.png";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -19,9 +20,13 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn">Book Your Event</button>
+          <Link to="/contact" className="btn">
+             Book Your Event
+          </Link>
 
-          <button className="btn-outline">Call Now</button>
+          <a href="tel:+916356582936" className="btn-outline">
+           Call Now
+          </a>
         </div>
 
         <div className="scroll">
