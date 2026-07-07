@@ -1,6 +1,7 @@
 <section className="cta" data-aos="fade-up"></section>
 import "./CallToAction.css";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function CallToAction() {
   return (
@@ -20,11 +21,10 @@ function CallToAction() {
           From weddings and birthdays to corporate events, we create
           beautiful moments with creativity, elegance and perfection.
         </p>
-
-        <button className="cta-btn">
-          Book Your Event
-          <FaArrowRight />
-        </button>
+<br></br><br></br><br></br><br></br>
+       <Link to="/contact" className="cta-btn">
+    Book Your Event
+</Link>
 
       </div>
 

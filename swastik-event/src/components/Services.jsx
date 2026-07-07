@@ -1,5 +1,6 @@
 <section className="services" data-aos="zoom-in"></section>
 import "./Services.css";
+import { Link } from "react-router-dom";
 
 import specialist from "../assets/images/specialist.png";
 import machines from "../assets/images/machines.png";
@@ -100,10 +101,11 @@ function Services() {
 
       </div>
 
-      <div className="service-btn">
-        <button>Book Your Event</button>
-      </div>
-
+      <div className="service-btn-container">
+  <Link to="/contact" className="service-btn">
+    Book Your Event
+  </Link>
+</div>
     </section>
   );
 }

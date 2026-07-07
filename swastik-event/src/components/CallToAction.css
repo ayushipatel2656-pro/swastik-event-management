@@ -29,26 +29,25 @@
 }
 
 .cta-btn{
-    margin-top:40px;
-    background:#C85A0A;
-    color:white;
-    border:none;
-    padding:18px 40px;
-    border-radius:50px;
-    font-size:18px;
-    cursor:pointer;
-
     display:inline-flex;
     align-items:center;
-    gap:12px;
+    justify-content:center;
+    gap:10px;
 
+    text-decoration:none;
+
+    background:#C85A0A;
+    color:white;
+    padding:16px 40px;
+    border-radius:50px;
+    font-size:20px;
+    font-weight:600;
     transition:.3s;
 }
 
 .cta-btn:hover{
     background:#E67E22;
-    transform:translateY(-5px);
-    box-shadow:0 15px 30px rgba(200,90,10,.35);
+    transform:translateY(-3px);
 }
 
 @media(max-width:768px){
