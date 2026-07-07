@@ -72,7 +72,10 @@ function Footer() {
 
           <div className="social-icons">
 
-  <a href="#">
+  <a href="httpd://www.instagram.com/swastik_event_?igsh=MXFhcDltc3h3Z3N6Yw=="
+   target="_blank"
+  rel="noreferrer"
+  >
     <FaInstagram />
   </a>
 
