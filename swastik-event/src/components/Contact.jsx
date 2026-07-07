@@ -9,11 +9,13 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    event: "",
+    date: "",
+    location: "",
     message: "",
   });
 
@@ -26,16 +28,33 @@ function Contact() {
 
   const handleSubmit = () => {
 
+    if (
+      !formData.name ||
+      !formData.phone ||
+      !formData.event ||
+      !formData.date ||
+      !formData.location
+    ) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
     const text = `
-*New Event Booking Request*
+🌸 *New Event Booking* 🌸
 
 👤 Name : ${formData.name}
 
+📞 Phone : ${formData.phone}
+
 📧 Email : ${formData.email}
 
-📱 Phone : ${formData.phone}
+🎉 Event Type : ${formData.event}
 
-📝 Message :
+📅 Event Date : ${formData.date}
+
+📍 Event Location : ${formData.location}
+
+💬 Message :
 ${formData.message}
 `;
 
@@ -45,7 +64,6 @@ ${formData.message}
   };
 
   return (
-
     <section className="contact" data-aos="fade-left">
 
       <div className="contact-heading">
@@ -70,7 +88,6 @@ ${formData.message}
           <h3>Contact Information</h3>
 
           <div className="info-box">
-
             <div className="icon">
               <FaPhoneAlt />
             </div>
@@ -79,11 +96,9 @@ ${formData.message}
               <h4>Phone</h4>
               <p>+91 63565 82936</p>
             </div>
-
           </div>
 
           <div className="info-box">
-
             <div className="icon">
               <FaWhatsapp />
             </div>
@@ -92,11 +107,9 @@ ${formData.message}
               <h4>WhatsApp</h4>
               <p>+91 63565 82936</p>
             </div>
-
           </div>
 
           <div className="info-box">
-
             <div className="icon">
               <FaEnvelope />
             </div>
@@ -105,20 +118,21 @@ ${formData.message}
               <h4>Email</h4>
               <p>dhavalpatel011006@gmail.com</p>
             </div>
-
           </div>
 
           <div className="info-box">
-
             <div className="icon">
               <FaMapMarkerAlt />
             </div>
 
             <div>
               <h4>Location</h4>
-              <p>Tadkeshwar, Main Road, Areth, Surat, Gujarat, India</p>
+              <p>
+                 Tadkeshwar, Main Road,<br />
+                 Areth, Surat,<br />
+                 Gujarat, India
+              </p>
             </div>
-
           </div>
 
         </div>
@@ -127,7 +141,7 @@ ${formData.message}
 
         <div className="contact-form">
 
-          <h3>Send Message</h3>
+          <h3>Book Your Event</h3>
 
           <input
             type="text"
@@ -153,6 +167,36 @@ ${formData.message}
             onChange={handleChange}
           />
 
+          <select
+            name="event"
+            value={formData.event}
+            onChange={handleChange}
+          >
+            <option value="">Select Event Type</option>
+            <option>Wedding</option>
+            <option>Reception</option>
+            <option>Birthday</option>
+            <option>Engagement</option>
+            <option>Corporate Event</option>
+            <option>Anniversary</option>
+            <option>Baby Shower</option>
+          </select>
+
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+          />
+
+          <input
+            type="text"
+            name="location"
+            placeholder="Event Location"
+            value={formData.location}
+            onChange={handleChange}
+          />
+
           <textarea
             rows="6"
             name="message"
@@ -162,7 +206,7 @@ ${formData.message}
           ></textarea>
 
           <button onClick={handleSubmit}>
-            Send Message
+            Book on WhatsApp
           </button>
 
         </div>
@@ -188,7 +232,6 @@ ${formData.message}
       </div>
 
     </section>
-
   );
 }
 
